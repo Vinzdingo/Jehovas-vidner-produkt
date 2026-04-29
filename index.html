@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<title>Jehovas Vidner</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f4f4;
+    scroll-behavior: smooth;
+}
+
+nav {
+    background: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background: linear-gradient(to right, #3498db, #2c3e50);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.card {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Jehovas Vidner</h1>
+    <ul>
+        <li><a href="#forside">Forside</a></li>
+        <li><a href="#fakta">Fakta</a></li>
+        <li><a href="#tro">Tro</a></li>
+    </ul>
+</nav>
+
+<header id="forside" class="hero fade-in">
+    <h2>Jehovas Vidner</h2>
+    <p>Tro, praksis og religiøse handlinger</p>
+</header>
+
+<section class="card fade-in">
+    <h2>Hvem er de?</h2>
+    <p>Jehovas Vidner er en kristen bevægelse, som lægger stor vægt på Bibelen og deres tro i hverdagen.</p>
+</section>
+
+<section id="fakta" class="card fade-in">
+    <h2>Fakta</h2>
+    <ul>
+        <li>🌍 Ca. 9,2 millioner medlemmer</li>
+        <li>🇩🇰 Ca. 14.500 i Danmark</li>
+        <li>📅 Startede i 1870’erne</li>
+    </ul>
+</section>
+
+<section class="card fade-in">
+    <h2>Dåb</h2>
+    <p>Dåben er et vigtigt skridt, når man bliver Jehovas Vidne.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Baptism_pool.jpg">
+</section>
+
+<section class="card fade-in">
+    <h2>At fortælle om deres tro</h2>
+    <p>
+        Jehovas Vidner fortæller ofte andre mennesker om deres tro på Gud (Jehova) og Bibelen.
+        De gør det ved at gå fra dør til dør eller tale med folk på offentlige steder.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Jehovahs_Witnesses_preaching.jpg">
+</section>
+
+<section id="tro" class="card fade-in">
+    <h2>Treenigheden</h2>
+    <p>
+        De tror ikke på treenigheden. Det betyder, at Gud, Jesus og Helligånden ses som tre forskellige og ikke én samlet Gud.
+    </p>
+</section>
+
+<script>
+const elements = document.querySelectorAll(".fade-in");
+
+function showOnScroll() {
+    elements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+            el.classList.add("show");
+        }
+    });
+}
+
+window.addEventListener("scroll", showOnScroll);
+showOnScroll();
+</script>
+
+</body>
+</html> 
